@@ -13,7 +13,7 @@ variables:
 parameters:
   - name: env
     type: string
-    default: po
+    default: qa
     values:
       - qa
       - prod
