@@ -10,6 +10,13 @@ variables:
  MAVEN_CACHE_FOLDER: $(Pipeline.Workspace)/.m2/repository
  MAVEN_OPTS: '-Dmaven.repo.local=$(MAVEN_CACHE_FOLDER)'
 
+parameters:
+  - name: env
+    type: string
+    default: qa
+    values:
+      - qa
+      - prod
 steps:
 - task: Cache@2
   displayName: 'Cache Maven local repo'
